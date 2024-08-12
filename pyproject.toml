@@ -19,6 +19,7 @@ urllib3 = "^2.2.1"
 aiostream = "^0.5.2"
 nest-asyncio = "^1.6.0"
 
+rizaio = { version = "^0.1.0a8", allow-prereleases = true }
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.2"
 pytest-asyncio = "^0.23.8"
@@ -42,13 +43,14 @@ known_third_party = [
   "python_dotenv",
   "python_dateutil",
   "pyyaml",
-  "urllib3"
+  "urllib3",
 ]
 
 [tool.poetry.scripts]
 api = "examples.api.api:main"
 async = "examples.async.worker:main"
 fanout = "examples.fanout.worker:main"
+riza = "examples.riza.worker:main"
 cancellation = "examples.cancellation.worker:main"
 concurrency_limit = "examples.concurrency_limit.worker:main"
 concurrency_limit_rr = "examples.concurrency_limit_rr.worker:main"
